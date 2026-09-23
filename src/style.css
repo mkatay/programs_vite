@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: auto;
+    background: #cac7c8;
+    background: radial-gradient(circle, rgb(243, 236, 239) 0%, rgba(148, 187, 233, 1) 100%);
+}
+.programs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+.card{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.445);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.192);
+    backdrop-filter: blur(9.1px);
+    -webkit-backdrop-filter: blur(9.1px);
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    padding: 8px;
+}
+header{
+    width:90%;
+    margin: 0 auto;
+    box-shadow: 0 0 3px rgb(245, 243, 243);
+    padding: 1rem;
+}
+button{
+    padding:10px;
+    border:1px solid rgb(245, 243, 243);
+    background-color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+}
