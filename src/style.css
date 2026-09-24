@@ -37,3 +37,29 @@ button{
     border-radius: 8px;
     font-size: 1rem;
 }
+.activeBtn{
+    background-color: rgb(61, 61, 110);
+    color:aliceblue;
+}
+footer{
+    width:90%;
+    margin: 1rem auto;
+    box-shadow: 0 0 3px rgb(245, 243, 243);
+    background-color: rgba(196, 216, 233,0.3);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+   
+}

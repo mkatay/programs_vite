@@ -20,11 +20,26 @@ export function renderCateg(arr){
     console.log(categories);
     categories=[...new Set(categories)]
     console.log(categories);
-    categories=[...categories,'összes']
+    //categories=[...categories,'összes']
 
     const btnStr=categories.map(ctg=>`
          <button>${ctg}</button>
         `).join('')
-    document.querySelector('header').innerHTML=btnStr
+    document.querySelector('header').innerHTML='<button class="activeBtn">összes</button>'+btnStr
     
+    
+}
+export function renderStats(programs) {
+  const participants = programs.reduce((sum, program) => sum + program.participants, 0);
+  const revenue = programs.reduce((sum, program) => sum + program.participants * program.price, 0);
+  const averagePrice = programs.reduce((sum, program) => sum + program.price, 0) / programs.length;
+  const indoorCount = programs.filter(program => program.indoor).length;
+
+  document.querySelector("footer").innerHTML = `
+    <p>Összes résztvevő: ${participants}</p>
+    <p>Átlagos részvételi díj: ${averagePrice.toFixed(2)} Ft</p>
+    <p>Jelenlegi bevétel: ${revenue} Ft</p>
+    <p>Beltéri programok: ${indoorCount}</p>
+    <p>Kültéri programok: ${programs.length - indoorCount}</p>
+  `;
 }
